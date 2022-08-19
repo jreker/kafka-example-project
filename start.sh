@@ -1,0 +1,3 @@
+java -Dapp.name="Consumer-SAP" -Djreker.kafka.topic.name=customer -Djreker.kafka.consumer.group.id=sap -jar consumer/target/consumer-0.0.1-SNAPSHOT.jar &
+java -Dapp.name="Consumer-CRM-01" -Djreker.kafka.topic.name=customer -Djreker.kafka.consumer.group.id=crm -jar consumer/target/consumer-0.0.1-SNAPSHOT.jar &
+java -Dapp.name="Consumer-CRM-02" -Djreker.kafka.topic.name=customer -Djreker.kafka.consumer.group.id=crm -jar consumer/target/consumer-0.0.1-SNAPSHOT.jar

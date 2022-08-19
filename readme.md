@@ -12,9 +12,14 @@ To use this example please follow the steps below:
 docker-compose up
 ```
 
-### 2. Start Server System emulations
+### 2. Create Topic in Kafka
+```
+kafka-topics.sh --create --topic "customer" --replication-factor 3 --partitions 3 --bootstrap-server=localhost:9092
 ```
 
+### 3. Start Server System emulations
+```
+java -Djreker.kafka.topic.name=customer -Djreker.kafka.bootstrap.server=localhost:29092 -Djreker.kafka.client.id=SAP -jar producer/target/producer-0.0.1-SNAPSHOT.jar
 ```
 ---
 ### Additional informations
