@@ -4,7 +4,7 @@
 To use this example please follow the steps below:
 
 ### Prerequisites
-- Java 18
+- Java 8
 - Docker 
 
 ### 1. Start Kafka-Cluster
