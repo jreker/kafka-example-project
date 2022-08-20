@@ -35,6 +35,7 @@ public class Producer {
             @Override
             public void onSuccess(SendResult<String, Customer> result) {
                 System.out.println("Message send successful " + data.toString() + " with offset " + result.getRecordMetadata().offset() + " to partition " + result.getRecordMetadata().partition());
+                System.out.println("Press any key to add or change a new customer or CTRL+C to quit.");
             }
             @Override
             public void onFailure(Throwable ex) {
@@ -43,27 +44,10 @@ public class Producer {
         });
     }
 
-    public void waitForKeyPressed() {
-        System.out.println("Press Enter key to continue...");
-        Scanner s = new Scanner(System.in);
-        s.nextLine();
-    }
-
     public void simulate() {
-
+        System.out.println("Press any key to add or change a new customer or CTRL+C to quit.");
         while(true) {
-        /*sendMessage(new Customer("Johannes", "Reken", "02345987", "reker@outlook.com", 1), "1");
-        waitForKeyPressed();
-        sendMessage(new Customer("Max", "Mustermän", "468788528", "max@mustermann.de",2), "2");
-        waitForKeyPressed();
-        sendMessage(new Customer("Max", "Mustermann", "468788528", "reker@outlook.com", 2), "2");
-        waitForKeyPressed();
-        sendMessage(new Customer("John", "Doe", "1245668", "J.Doe@example.com", 3), "3");
-        waitForKeyPressed();
-        sendMessage(new Customer("Johannes", "Reker", "02345987", "reker@outlook.com", 1), "1");
-        waitForKeyPressed();*/
             Scanner s = new Scanner(System.in);
-            System.out.println("Press any key to add or change a new customer or CTRL+C to quit.");
             s.nextLine();
             Customer newCustomer = new Customer();
             System.out.println("Firstname:");
