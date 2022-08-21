@@ -52,6 +52,9 @@ Start CRM Producer
 ```
 java -Djreker.kafka.topic.name=customer -Djreker.kafka.bootstrap.server=localhost:29092 -Djreker.kafka.client.id=CRM -jar producer/target/producer-0.0.1-SNAPSHOT.jar
 ```
+### 6. Send Messages with the Producer
+The Producer let you send a contact via console. You have to type in different informations (sirname, lastname,...)
+
 ---
 ### Additional informations
 - Build with Bitnami Kafka Docker Images
